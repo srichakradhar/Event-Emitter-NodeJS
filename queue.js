@@ -42,4 +42,4 @@ class AysncQueue extends EventEmitter {
 
 }
 
-export default AysncQueue;
+exports.default = AysncQueue;
