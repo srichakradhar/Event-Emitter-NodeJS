@@ -14,16 +14,15 @@ class AysncQueue extends EventEmitter {
     this.emit("enqueued", item);
   }
 
+  getCurrentInterval() {
+    return this.currentInterval;
+  }
   peek() {
     return this.tasks[0];
   }
 
   print() {
     return this.tasks;
-  }
-
-  getCurrentInterval() {
-    return this.currentInterval;
   }
 
   start() {
