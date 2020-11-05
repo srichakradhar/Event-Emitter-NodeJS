@@ -1,4 +1,3 @@
-const async = require('async');
 const { EventEmitter } = require('events');
 
 class AysncQueue extends EventEmitter {
