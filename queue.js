@@ -40,4 +40,8 @@ class AysncQueue extends EventEmitter {
 
 }
 
+var queue = new AysncQueue();
+queue.enqueue(10);
+queue.peek()
+
 exports.default = AysncQueue;
