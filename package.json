@@ -6,7 +6,6 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "prestart": "npm install",
     "pretest": "npm install",
     "test": "./node_modules/.bin/mocha test"
   },

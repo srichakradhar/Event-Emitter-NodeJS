@@ -29,9 +29,10 @@ class AysncQueue extends EventEmitter {
     this.processing = true;
     this.currentInterval = this.tasks[0];
     setTimeout(function () {
-      console.log(`Task ${this.currentInterval} processing`);
+      // console.log(`Task ${this.currentInterval} processing`);
       this.tasks.shift();
-    }, this.currentInterval).bind(this);
+      this.start()
+    }, this.currentInterval);
   }
 
   pause() {
@@ -40,8 +41,4 @@ class AysncQueue extends EventEmitter {
 
 }
 
-var queue = new AysncQueue();
-queue.enqueue(10);
-queue.peek()
-
-exports.default = AysncQueue;
+module.exports = AysncQueue;
